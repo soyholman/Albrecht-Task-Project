@@ -1,6 +1,7 @@
 
 <?php get_header(); ?>
 
+<?php $home = get_field('home');?>
 <body>
     <section class="hero-banner owl-carousel owl-theme">
         <div class="item">
@@ -19,7 +20,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="section-title">
-                        <h2 class="colr-dark">SOLUÇÕES PARA A INDÚSTRIA</h2>
+                        <h2 class="colr-dark" id="Main-title"><?php echo $home['main_title'];?></h2>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -78,17 +79,18 @@
             <div class="row">
                 <div class="col-sm-5">
                     <div class="section-title">
-                        <h2>ONDE ESTAMOS</h2>
+                        <h2><?php echo $home['onda-estamos-section'];?></h2>
                     </div>
                     <div class="address-location">
                         <p>
-                            <strong> Albrecht Equipamentos Industriais Ltda.</strong> <br>
-                            BR 101, km 29 – Caixa Postal 7171<br>
+                            <strong> <?php echo $home['address-location-title'];?></strong> <br>
+                            <?php echo $home['address-location-description'];?>
+                            <!-- BR 101, km 29 – Caixa Postal 7171<br>
                             CEP 89239-052 - Pirabeiraba<br>
-                            Joinville/SC
+                            Joinville/SC -->
                         </p>
                         <p>
-                            PABX: +55 (47) 4009-3300 <br>
+                        <?php echo $home['address-location-number'];?> <br>
                             <a href="mailto:albrecht@albrecht.com.br">albrecht@albrecht.com.br</a>
                         </p>
                         <p>
@@ -101,6 +103,7 @@
                 </div>
                 <div class="col-sm-7">
                     <div class="map">
+                        
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21016.040401442777!2d2.45100533880156!3d48.819965081013905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60d0f4ce33b83%3A0xe6c94d8bdb122f8e!2sJoinville-le-Pont%2C%20France!5e0!3m2!1sen!2sin!4v1650805896274!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -116,8 +119,18 @@
                     </div>
                 </div>
                 <div class="col-sm-5">
-             
-                    <img src="<?php echo bloginfo('template_directory'); ?>/images/vince-fleming.png" alt="profile"> 
+
+                <?php if( have_rows('home') ): ?>
+    <?php while( have_rows('home') ): the_row(); 
+        $image=get_sub_field('person_image');
+        ?>
+        <img src="<?php echo $image;?>" alt="profile">
+    <?php endwhile; ?>
+    </ul>
+<?php endif; ?>
+
+
+
                 </div>
                 <div class="col-sm-7">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, iusto adipisci perspiciatis suscipit voluptate corporis provident, quaerat temporibus recusandae sunt dicta non incidunt magnam, assumenda eius sint? A, odio, nisi.</p>

@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,23 +10,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <?php wp_head();?>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php bloginfo ('template_directory');?>/css/style.css">
+  <link rel="stylesheet" href="<?php bloginfo ('template_directory');?>/css/responsive.css">
+  <link rel="stylesheet" href="<?php bloginfo ('template_directory');?>/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="<?php bloginfo ('template_directory');?>/css/owl.carousel.min.css">
+  
 </head>
 
 <header>
+      <?php wp_head();?>  
+      <style>
+          html {
+    margin: 0px !important;
+    overflow:auto;
+}
+      </style>
+<?php $home = get_field('home');?>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg ">
                        
-                        <a class="navbar-brand" href="#"><img src="<?php echo bloginfo('template_directory'); ?>/images/logo.svg"  alt="logo"></a>
+        
+                    
+                            <a class="navbar-brand" href="<?php  
+                            add_action( 'template_redirect', 'redirect_to_other_page' );
+                            function redirect_to_other_page() {
+                                if ( is_page( 143 ) ) {
+                                  
+                                  wp_redirect( '"'.home_url().'front-page"', 301 );
+                                  
+                                exit;
+                                }
+                            }
+                            
+                            
+                            ?>">
+                            <img src="<?php echo bloginfo('template_directory'); ?>/images/logo.svg"  alt="logo"></a>
+                 
+               
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon">
                                 <i class="fa fa-bars"></i>
                             </span>
                         </button>
+                     
                         <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
-                        <?php wp_nav_menu(array ('theme_location'=>'primary')) ;
+                     
+                        
+                        <?php wp_nav_menu(array ('theme_location'=>'top_menu',
+                       'menu'=>'Top menu',
+                        'menu_class'=>'navbar navbar-expand-lg',
+                        'container_class'=>'',
+                        'li_class'=>'nav-item',
+                        'a_class'=>'nav-link ',
+                        'active_class'=>'active'
+                   
+         
+                        )) ;
                         ?>
                             <!-- <ul class="navbar-nav align-items-center">
                                 <li class="nav-item dropdown">
