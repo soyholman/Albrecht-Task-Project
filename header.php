@@ -30,6 +30,17 @@
     text-decoration: none;
     background-color: white;
 }
+.dropdown-toggle::after {
+    /* display: inline-block; */
+    display:none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
       </style>
 <?php $home = get_field('home');?>
         <div class="container">
@@ -39,11 +50,7 @@
                        
         
                     
-                            <a class="navbar-brand" href="<?php  
-                     
-                            
-                            
-                            ?>">
+                            <a class="navbar-brand" href="<?php echo home_url(); ?>">
                             <img src="<?php echo bloginfo('template_directory'); ?>/images/logo.svg"  alt="logo"></a>
                  
                
@@ -60,16 +67,23 @@
                         <?php
         wp_nav_menu( array(
             'theme_location'    => 'top-menu',
-            'depth'             => 2,
+            'depth'             => 3,
             'container'         => 'li',
             'container_class'   => 'collapse navbar-collapse',
             'container_id'      => 'bs-example-navbar-collapse-1',
             'menu_class'        => 'nav navbar-nav',
             'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
             'walker'            => new WP_Bootstrap_Navwalker(),
+            
         ) );
         ?>
-                  
+<!--                   
+                  'menu_class'=>'navbar navbar-expand-lg',
+                        'container_class'=>'',
+                        'li_class'=>'nav-item',
+                        'a_class'=>'nav-link ',
+                        'active_class'=>'active' -->
+
                             <!-- <ul class="navbar-nav align-items-center">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">sobre nos</a>
@@ -118,3 +132,4 @@
 
     
 </html>
+  <?php wp_footer(); ?>

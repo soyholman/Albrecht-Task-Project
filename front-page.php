@@ -1,19 +1,27 @@
 
 <?php get_header(); ?>
 
+<style>
+
+    
+</style>
 <?php $home = get_field('home');?>
 <body>
     <section class="hero-banner owl-carousel owl-theme" >
+    <?php if( have_rows('banner') ): ?>
+    <?php while( have_rows('banner') ): the_row(); 
+        $image=get_sub_field('img');
+        ?>
+     
         <div class="item">
-        <img  src="<?php echo bloginfo('template_directory'); ?>/images/1.jpg" alt="rec-5-2">
+        <img  src="<?php echo $image['url'];?>" alt="rec-5-2">
             
         </div>
-        <div class="item">
-            <img   src="<?php echo bloginfo('template_directory'); ?>/images/4.jpg"  alt="rec-5-2">
-        </div>
-        <div class="item">
-            <img   src="<?php echo bloginfo('template_directory'); ?>/images/1.jpg" alt="rec-5-2">
-        </div> 
+    <?php endwhile; ?>
+    </ul>
+<?php endif; ?>  
+    
+  
     </section>
     <section class="solution-industry section-gap">
         <div class="container">
@@ -23,54 +31,31 @@
                         <h2 class="colr-dark" id="Main-title"><?php echo $home['main_title'];?></h2>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="industry-list">
-                        <img src="<?php echo bloginfo('template_directory'); ?>/images/rec-5-2.png" alt="">
+
+
+                <?php if( have_rows('solution-industry') ): ?>
+    <?php while( have_rows('solution-industry') ): the_row(); 
+        $image=get_sub_field('img');
+        $text=get_sub_field('industry-name');
+        ?>
+  <div class="col-sm-4">
+      
+                    <div class="industry-list" >
+                    <img src="<?php echo $image['url'];?>" alt="">
                         <div class="industry-link">
-                            <a href="javascript:;">Linha verde</a>
+                        <a href="javascript:;"><?php echo $text;?></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="industry-list">
-                        <img src="<?php echo bloginfo('template_directory'); ?>/images/rec-5-2.png"> 
-                        <div class="industry-link">
-                            <a href="javascript:;">Linha azul</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="industry-list">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/images/rec-5-2.png"> 
-                        <div class="industry-link">
-                            <a href="javascript:;">Linha amarela</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="industry-list">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/images/rec-5-2.png"> 
-                        <div class="industry-link">
-                            <a href="javascript:;">Saneamento</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="industry-list">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/images/rec-5-2.png"> 
-                        <div class="industry-link">
-                            <a href="javascript:;">Projetos Especiais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="industry-list">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/images/rec-5-2.png"> 
-                        <div class="industry-link">
-                            <a href="javascript:;">Serviços</a>
-                        </div>
-                    </div>
-                </div>
+                     
+     
+    <?php endwhile; ?>
+   
+<?php endif; ?> 
+         
+              
+            
+           
             </div>
         </div>
     </section>
@@ -133,8 +118,8 @@
 
                 </div>
                 <div class="col-sm-7">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, iusto adipisci perspiciatis suscipit voluptate corporis provident, quaerat temporibus recusandae sunt dicta non incidunt magnam, assumenda eius sint? A, odio, nisi.</p>
-                    <label>Nilton Althoff</label>
+                    <p><?php echo $home['person_description'];?></p>
+                    <label><?php echo $home['manager_name'];?></label>
                     <span>Gerente de Producao - 30 anas Albrecht</span>
                 </div>
             </div>
@@ -142,4 +127,4 @@
     </section>
     </body>
     <?php get_footer();?>
-    <?php wp_footer(); ?>
+   

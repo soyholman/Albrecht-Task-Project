@@ -1,9 +1,7 @@
-
-
- 
 <?php
-/*Template Name: About*/
+/*Template Name:Solucos*/
 get_header(); ?>
+
 
 
 <section class="breadcrums-main">
@@ -12,33 +10,15 @@ get_header(); ?>
                 <div class="col-sm-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb" style="background-color: white;">
-                            <li class="breadcrumb-item"><a href="#">SOBRE NÓS </a></li>
-                            <li class="breadcrumb-item active" style="color: #00AD6B;" aria-current="page">INSTITUCIONAL</li>
+                            <li class="breadcrumb-item"><a href="#">Sobre Nos</a></li>
+                            <li class="breadcrumb-item active" style="color: #00AD6B;" aria-current="page">Institutional</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about section-gap">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <div class="about-img">
-                        <img src= "<?php echo bloginfo('template_directory'); ?>/images/Equipe.png" class="w-100" alt="about">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="section-title green-border">
-                        <h2>INOVAÇÃO E EXCELÊNCIA</h2>
-                    </div>
-                    <p>Somos fabricantes de máquinas e equipamentos com tecnologia própria. Nosso time é formado por uma equipe multidisciplinar, motivada a superar desafios e utilizar o senso criativo para proposição de novos processos e produtos. </p>
-                    <p> Com laboratório próprio, desenvolvemos simulações nas áreas das operações unitárias e termodinâmica, transformando idéias em Inovação e oferecendo ao cliente suporte técnico para implementação de nossas máquinas e equipamentos nos mais diversos segmentos industriais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="services-industry section-gap pt-0">
+    <section class="services-industry section-gap pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -95,47 +75,60 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="technology section-gap bg-grey">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="section-title green-border">
-                        <h2>TECNOLOGIA ALBRECHT</h2>
+            <div class="info-detail">
+                <div class="row no-gutters">
+                    <div class="col-sm-6 bg-green">
+                        <div class="info-button">
+                            <h4>CENTRAL DE CATÁLOGOS</h4>
+                            <a href="javascript:;"><img src="<?php echo bloginfo('template_directory'); ?>/images/pdf.png" alt="pdf" class="mr-1"> Ir para Central de Catálogos</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="technology-grid">
-                        <h3>Customização</h3>
-                        <p>Com engenharia própria, desenvolvemos projetos personalizados, de acordo com a necessidade produtiva de cada cliente, efetuando os ajustes e adequações para o melhor arranjo espacial (layout) e otimização das utilidades existentes no cliente.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="technology-grid">
-                        <h3>Sustentabilidade</h3>
-                        <p>Somos uma equipe multidisciplinar, nas diversas especialidades da engenharia. Trabalhamos as informações de cada cliente com responsabilidade e atenção, para que a performance de cada máquina contemple a melhor relação custo x benefício dos insumos (energia elétrica, térmica, água, ar comprimido, etc…)</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="technology-grid">
-                        <h3>Qualidade</h3>
-                        <p>Nossa missão é a melhoria contínua de nossos processos e produtos, através da capacitação de nossa equipe e aprimoramento dos projetos, com foco na segurança, confiabilidade e eficiência de performance.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="technology-grid">
-                        <h3>Certificações</h3>
-                        <div class="d-flex mt-3">
-                            <img src="<?php echo bloginfo('template_directory'); ?>/images/Selo_SGS.png" class="mr-5" alt="Selo_SGS">
-                            <img src="<?php echo bloginfo('template_directory'); ?>/images/Abimaq_vertical.png" alt="Abimaq_vertical">
+                    <div class="col-sm-6 bg-orange">
+                        <div class="info-button">
+                            <h4>MAIS INFORMAÇÕES</h4>
+                            <a href="javascript:;">Entre em contato conosco</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about section-gap pb-0">
+    <section class="technology section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title green-border">
+                        <h2>Technologia Albrecht</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="technology-grid">
+                        <h3>Customizacao</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsum porro vel a voluptatibus cumque labore? Inventore doloribus vero, harum porro ab. Iste reprehenderit autem quia culpa, cupiditate eaque recusandae.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="technology-grid">
+                        <h3>Customizacao</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsum porro vel a voluptatibus cumque labore? Inventore doloribus vero, harum porro ab. Iste reprehenderit autem quia culpa, cupiditate eaque recusandae.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="technology-grid">
+                        <h3>Customizacao</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsum porro vel a voluptatibus cumque labore? Inventore doloribus vero, harum porro ab. Iste reprehenderit autem quia culpa, cupiditate eaque recusandae.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="technology-grid">
+                        <h3>Customizacao</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsum porro vel a voluptatibus cumque labore? Inventore doloribus vero, harum porro ab. Iste reprehenderit autem quia culpa, cupiditate eaque recusandae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about section-gap">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
@@ -159,4 +152,7 @@ get_header(); ?>
 
 
 
+
+
 <?php get_footer();?>
+  
