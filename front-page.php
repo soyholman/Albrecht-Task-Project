@@ -3,17 +3,17 @@
 
 <?php $home = get_field('home');?>
 <body>
-    <section class="hero-banner owl-carousel owl-theme">
+    <section class="hero-banner owl-carousel owl-theme" >
         <div class="item">
-        <img src="<?php echo bloginfo('template_directory'); ?>/images/1.jpg" alt="rec-5-2">
+        <img  src="<?php echo bloginfo('template_directory'); ?>/images/1.jpg" alt="rec-5-2">
             
         </div>
         <div class="item">
-            <img  src="<?php echo bloginfo('template_directory'); ?>/images/4.jpg"  alt="rec-5-2">
+            <img   src="<?php echo bloginfo('template_directory'); ?>/images/4.jpg"  alt="rec-5-2">
         </div>
         <div class="item">
-            <img  src="<?php echo bloginfo('template_directory'); ?>/images/1.jpg" alt="rec-5-2">
-        </div>
+            <img   src="<?php echo bloginfo('template_directory'); ?>/images/1.jpg" alt="rec-5-2">
+        </div> 
     </section>
     <section class="solution-industry section-gap">
         <div class="container">

@@ -73,7 +73,7 @@ if(isset($args->li_class)){
     $classes[]=$args->li_class;
 }
 
-if(isset($args->active_classes) && in_array('current-menu-item',$classes)){
+if(isset($args->active_class) && in_array('current-menu-item',$classes)){
     $classes[]=$args->active_class;
 }
 
@@ -89,5 +89,15 @@ if(isset($args->a_class)){
 return $attr;     
     }
     add_filter('nav_menu_link_attributes','add_anchor_class',10,3);
+
+    /**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+
 ?>
 

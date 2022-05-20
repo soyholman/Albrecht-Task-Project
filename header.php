@@ -17,13 +17,18 @@
   <link rel="stylesheet" href="<?php bloginfo ('template_directory');?>/css/owl.carousel.min.css">
   
 </head>
-
+    
 <header>
       <?php wp_head();?>  
       <style>
           html {
     margin: 0px !important;
     overflow:auto;
+}
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: white;
 }
       </style>
 <?php $home = get_field('home');?>
@@ -35,15 +40,7 @@
         
                     
                             <a class="navbar-brand" href="<?php  
-                            add_action( 'template_redirect', 'redirect_to_other_page' );
-                            function redirect_to_other_page() {
-                                if ( is_page( 143 ) ) {
-                                  
-                                  wp_redirect( '"'.home_url().'front-page"', 301 );
-                                  
-                                exit;
-                                }
-                            }
+                     
                             
                             
                             ?>">
@@ -59,17 +56,20 @@
                         <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
                      
                         
-                        <?php wp_nav_menu(array ('theme_location'=>'top_menu',
-                       'menu'=>'Top menu',
-                        'menu_class'=>'navbar navbar-expand-lg',
-                        'container_class'=>'',
-                        'li_class'=>'nav-item',
-                        'a_class'=>'nav-link ',
-                        'active_class'=>'active'
-                   
-         
-                        )) ;
-                        ?>
+                       
+                        <?php
+        wp_nav_menu( array(
+            'theme_location'    => 'top-menu',
+            'depth'             => 2,
+            'container'         => 'li',
+            'container_class'   => 'collapse navbar-collapse',
+            'container_id'      => 'bs-example-navbar-collapse-1',
+            'menu_class'        => 'nav navbar-nav',
+            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'            => new WP_Bootstrap_Navwalker(),
+        ) );
+        ?>
+                  
                             <!-- <ul class="navbar-nav align-items-center">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">sobre nos</a>

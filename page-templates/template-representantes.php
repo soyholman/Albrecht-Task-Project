@@ -5,14 +5,15 @@ get_header(); ?>
 
 
 
-<section class="breadcrums-main orange">
+<section class="breadcrums-main">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">CONTATO </a></li>
-                            <li class="breadcrumb-item active" aria-current="page">REPRESENTANTES</li>
+                        <ol class="breadcrumb" style="background-color: white;">
+                            <li class="breadcrumb-item"><a href="#">CONTATO
+ </a></li>
+                            <li class="breadcrumb-item active" style="    color: #fe7c20;" aria-current="page">REPRESENTANTES</li>
                         </ol>
                     </nav>
                 </div>

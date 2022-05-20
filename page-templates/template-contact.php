@@ -8,8 +8,8 @@ get_header(); ?>
                 <div class="col-sm-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb" style="background-color: white;">
-                            <li class="breadcrumb-item"><a href="#">SOBRE NÓS </a></li>
-                            <li class="breadcrumb-item active" style="    color: #fe7c20;" aria-current="page">INSTITUCIONAL</li>
+                            <li class="breadcrumb-item"><a href="#">CONTATO </a></li>
+                            <li class="breadcrumb-item active" style="    color: #fe7c20;" aria-current="page">FALE CONOSCO</li>
                         </ol>
                     </nav>
                 </div>
